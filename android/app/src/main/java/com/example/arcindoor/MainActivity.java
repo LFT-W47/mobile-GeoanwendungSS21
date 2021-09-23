@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new LoadTask().execute();
     }
 
     public class MyActivity extends Activity {
@@ -86,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         DeviceInfo info = navigation.getDeviceInfo();  // Get device position
         if (!info.isValid())
         {
+            Toast.makeText(this, "fak up",
+                    Toast.LENGTH_LONG).show();
             // Navigation results are not available
             // Try to find out the problem using navigation error code
             switch (info.errorCode)
@@ -111,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else
+            Toast.makeText(this, "jah jah",
+                    Toast.LENGTH_LONG).show();
             Log.d(TAG, String.format(Locale.ENGLISH, "Device %s: [%d/%d, %.2f, %.2f]",
                     info.id, info.location, info.subLocation, info.x, info.y));
     }
