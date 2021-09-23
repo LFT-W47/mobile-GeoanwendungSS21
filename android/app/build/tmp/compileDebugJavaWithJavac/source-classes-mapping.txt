@@ -1,0 +1,4 @@
+com/example/arcindoor/MainActivity.java
+ com.example.arcindoor.MainActivity
+com/example/arcindoor/BuildConfig.java
+ com.example.arcindoor.BuildConfig
